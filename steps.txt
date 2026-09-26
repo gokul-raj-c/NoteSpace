@@ -1,0 +1,19 @@
+PS D:\MindNotes> python -m venv venv
+PS D:\MindNotes> venv\Scripts\activate  
+
+(venv) PS D:\MindNotes> pip install django                                                                                                                                                                   
+(venv) PS D:\MindNotes> python -m django --version
+5.2.17
+
+django-admin startproject     # create a new project that has complete structure  
+
+
+(venv) PS D:\MindNotes> django-admin     # we get list of sub commands
+
+(venv) PS D:\MindNotes> django-admin startproject config .     #  The . means "create the project in the current directory."                                                                                                                                          
+
+(venv) PS D:\MindNotes> python manage.py runserver         # to run the project
+
+(venv) PS D:\MindNotes> python manage.py startapp blog
+
+
