@@ -17,3 +17,43 @@ django-admin startproject     # create a new project that has complete structure
 (venv) PS D:\MindNotes> python manage.py startapp blog
 
 
+migration
+it allows as to apply changes in databases 
+
+first migration will create db and add a bunch of default tables for us
+
+(venv) PS D:\NoteSpace> python manage.py makemigrations
+
+make migration just detect the changes and prepare django to update db
+
+it doesnt actually run those changes yet in order to apply migrations we needed
+
+
+
+(venv) PS D:\NoteSpace> python manage.py migrate 
+
+
+(venv) PS D:\NoteSpace> python manage.py createsuperuser
+Username (leave blank to use 'gokul'): adminnotespace
+Email address: adminnotespace@gmail.com
+Password: admin1234
+
+
+
+# to get sql 
+(venv) PS D:\NoteSpace> python manage.py sqlmigrate blog 0001
+BEGIN;
+--
+-- Create model Post
+--
+CREATE TABLE "blog_post" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(100) NOT NULL, "content" text NOT NULL, "date_posted" datetime NOT NULL, "author_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED);
+CREATE INDEX "blog_post_author_id_dd7a8485" ON "blog_post" ("author_id");
+COMMIT;
+
+
+
+
+(venv) PS D:\NoteSpace> python manage.py shell
+
+
+
