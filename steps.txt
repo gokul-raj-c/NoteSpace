@@ -57,3 +57,5 @@ COMMIT;
 
 
 
+(venv) PS D:\NoteSpace> python manage.py startapp users                                                                                
+(venv) PS D:\NoteSpace> pip install django-crispy-forms
