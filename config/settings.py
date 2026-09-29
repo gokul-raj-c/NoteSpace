@@ -124,6 +124,8 @@ STATIC_URL = "static/"
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
+LOGIN_REDIRECT_URL="blog-home"
+
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
